@@ -195,7 +195,7 @@ The HELLO command contains these fields:
 * <tt>status</tt> - the sender's group status sequence.
 * <tt>headers</tt> - zero or more properties set by the sender.
 
-If the recipient has not already connected to this peer it SHALL create a ZeroMQ DEALER socket and connect it to the endpoint specified as "tcp://ipaddress:mailbox".
+If the recipient has not already connected to this peer it SHALL create a ZeroMQ DEALER socket and connect it to the endpoint specified as "endpoint" (which MAY take the form "tcp://ipaddress:port" when TCP is used).
 
 The "group status sequence" is a one-octet number that is incremented each time the peer joins or leaves a group. Each peer MAY use this to assert the accuracy of its own group management information.
 
